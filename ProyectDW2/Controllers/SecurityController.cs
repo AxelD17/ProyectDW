@@ -9,8 +9,9 @@ namespace ProyectDW2.Controllers
     public class SecurityController : Controller
     {
         // GET: Security
-        public ActionResult Index()
+        public ActionResult LogIn()
         {
+            Session.Abandon();
             return View();
         }
     }

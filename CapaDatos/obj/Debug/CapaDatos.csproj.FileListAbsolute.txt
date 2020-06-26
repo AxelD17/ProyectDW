@@ -1,0 +1,5 @@
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\bin\Debug\CapaDatos.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.pdb

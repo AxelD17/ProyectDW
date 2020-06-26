@@ -49,6 +49,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -121,21 +124,35 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\datatable.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\img\clinica-dental.jpg" />
+    <Content Include="Content\img\logo-mascota.png" />
+    <Content Include="Content\img\logo-oficial-pazi-blanco.png" />
+    <Content Include="Content\img\pazi-logo-menu.png" />
     <Content Include="Content\img\undraw_posting_photo.svg" />
+    <Content Include="Content\js\lib\datatable.min.js" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
     <Content Include="Content\js\demo\chart-pie-demo.js" />
     <Content Include="Content\js\demo\datatables-demo.js" />
-    <Content Include="Content\js\sb-admin-2.js" />
-    <Content Include="Content\js\sb-admin-2.min.js" />
+    <Content Include="Content\js\generic.js" />
+    <Content Include="Content\js\lib\jquery-3.4.1.min.js" />
+    <Content Include="Content\js\lib\sb-admin-2.js" />
+    <Content Include="Content\js\lib\sb-admin-2.min.js" />
+    <Content Include="Content\js\User.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
@@ -150,6 +167,11 @@
     <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.js" />
     <Content Include="Content\vendor\datatables\jquery.dataTables.js" />
     <Content Include="Content\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\vendor\datatables\sort_asc.png" />
+    <Content Include="Content\vendor\datatables\sort_asc_disabled.png" />
+    <Content Include="Content\vendor\datatables\sort_both.png" />
+    <Content Include="Content\vendor\datatables\sort_desc.png" />
+    <Content Include="Content\vendor\datatables\sort_desc_disabled.png" />
     <Content Include="Content\vendor\fontawesome-free\css\all.css" />
     <Content Include="Content\vendor\fontawesome-free\css\all.min.css" />
     <Content Include="Content\vendor\fontawesome-free\css\brands.css" />
@@ -1723,13 +1745,6 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-brands-400.svg" />
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-regular-400.svg" />
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.svg" />
-    <Content Include="Content\vendor\jquery-easing\jquery.easing.compatibility.js" />
-    <Content Include="Content\vendor\jquery-easing\jquery.easing.js" />
-    <Content Include="Content\vendor\jquery-easing\jquery.easing.min.js" />
-    <Content Include="Content\vendor\jquery\jquery.js" />
-    <Content Include="Content\vendor\jquery\jquery.min.js" />
-    <Content Include="Content\vendor\jquery\jquery.slim.js" />
-    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1898,8 +1913,6 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff" />
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
-    <Content Include="Content\vendor\jquery\jquery.min.map" />
-    <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1925,9 +1938,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Security\LogIn.cshtml" />
+    <Content Include="Views\User\_LayoutPage1.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{e1086030-e804-4f24-a7a5-73685317dff3}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,7 @@
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\bin\ServicesWFC.dll.config
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\bin\ServicesWFC.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\bin\ServicesWFC.pdb
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\obj\Debug\ServicesWFC.csprojAssemblyReference.cache
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\obj\Debug\ServicesWFC.csproj.CoreCompileInputs.cache
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\obj\Debug\ServicesWFC.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\ServicesWFC\obj\Debug\ServicesWFC.pdb

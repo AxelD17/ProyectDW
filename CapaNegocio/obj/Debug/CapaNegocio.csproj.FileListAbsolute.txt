@@ -1,0 +1,5 @@
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.pdb
