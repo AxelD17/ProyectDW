@@ -11,17 +11,18 @@ function llenarcombo(data, control, primerElemento) {
     control.innerHTML = contenido;
 }
 
-function crearlistado(arrayColumn, data) {
+function crearlistado(arrayColumn, data, modal) {
     var nfilas = 0;
     var contenido = "";
     var llaves = Object.keys(data[0]);
-    contenido += "<table id='tablaG' class='table'>";
+    contenido += "<table class='table table-bordered' id='tablaG' width='100%' cellspacing='0'>";
     contenido += "<thead>";
     contenido += "<tr>";
     nfilas = arrayColumn.length
     for (var i = 0; i < nfilas; i++) {
         contenido += "<td>" + arrayColumn[i] + "</td>";
     }
+    contenido += "<td>Opciones</td>";
     contenido += "</tr>";
     contenido += "</thead>";
     contenido += "<tbody>";
@@ -32,6 +33,11 @@ function crearlistado(arrayColumn, data) {
             var valorLlave = llaves[j];
             contenido += "<td>" + data[i][valorLlave] + "</td>";
         }
+        var llaveID = llaves[0];
+        contenido += "<td>";
+        contenido += "<button class='btn btn-warning' onClick='EditModal(" + data[i][llaveID] + ")' data-toggle='modal' data-target='#" + modal + "'><i class='fas fa-edit'></i></button> ";
+        contenido += "<button class='btn btn-danger'><i class='fas fa-trash'></i></button>";
+        contenido += "</td>";
         contenido += "</tr>";
     }
     contenido += "</tbody>";
@@ -40,6 +46,39 @@ function crearlistado(arrayColumn, data) {
     document.getElementById("divTabla").innerHTML = contenido;
 
     $('#tablaG').dataTable({
-        searching: false
+        searching: false,
+        language: {
+            "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+        }
     });
+}
+
+function cleanData() {
+    var controls = document.getElementsByClassName("clean-input");
+    var ncontrol = controls.length;
+    for (var i = 0; i < ncontrol; i++) {
+        controls[i].value = "";
+        controls[i].parentNode.classList.remove("rq");
+    }
+    controls = document.getElementsByClassName("clean-select");
+    ncontrol = controls.length;
+    for (var i = 0; i < ncontrol; i++) {
+        controls[i].value = 0;
+        controls[i].parentNode.classList.remove("rq");
+    }
+}
+
+function requiredData() {
+    var exito = true;
+    var controls = document.getElementsByClassName("required");
+    var ncontrol = controls.length;
+    for (var i = 0; i < ncontrol; i++) {
+        if (controls[i].value == "" || controls[i].value == 0) {
+            controls[i].parentNode.classList.add("rq");
+            exito = false;
+        } else {
+            controls[i].parentNode.classList.remove("rq");
+        }
+    }
+    return exito
 }

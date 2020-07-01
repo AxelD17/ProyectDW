@@ -10,10 +10,7 @@ namespace ProyectDW2
         {
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Content/js/sb-admin-2.min.js",
-                      "~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js",
-                      "~/Content/vendor/chart.js/Chart.min.js",
-                      "~/Content/js/demo/chart-area-demo.js",
-                      "~/Content/js/demo/chart-pie-demo.js"));
+                      "~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/sb-admin-2.min.css",

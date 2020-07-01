@@ -6,12 +6,16 @@ using System.Web.Mvc;
 
 namespace ProyectDW2.Controllers
 {
-    public class SecurityController : Controller
+    public class MainController : Controller
     {
-        // GET: Security
-        public ActionResult LogIn()
+        // GET: Main
+        public ActionResult Main()
         {
-            Session.Abandon();
+            return View();
+        }
+        // GET: Main
+        public ActionResult Admin()
+        {
             return View();
         }
     }

@@ -3,3 +3,14 @@ D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\bin\Debu
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaNegocio\obj\Debug\CapaNegocio.pdb

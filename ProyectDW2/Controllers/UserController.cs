@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CapaEntidad;
+using CapaNegocio;
 using Newtonsoft.Json;
 
 namespace ProyectDW2.Controllers
@@ -16,13 +17,30 @@ namespace ProyectDW2.Controllers
         SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ConnectionString);
         SqlCommand cmd;
         SqlDataReader dr;
-
+        UserBL bl = new UserBL();
         // GET: User
         [HttpGet]
         public ActionResult Login()
         {
             return View();
         }
+        //[HttpGet]
+        //public ActionResult Verify(string userName, string userPass)
+        //{
+        //    var rpt = bl.verify(userName, userPass);
+        //    if (rpt == 1)
+        //    {
+        //        cn.Close();
+        //        //return RedirectToAction("../Main/Admin");
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        cn.Close();
+        //        return RedirectToAction("Login");
+        //    }
+        //}
+
         [HttpPost]
         public ActionResult Verify(User u)
         {
@@ -35,12 +53,13 @@ namespace ProyectDW2.Controllers
             if (dr.Read())
             {
                 cn.Close();
-                return RedirectToAction("Login");
+                //return RedirectToAction("../Main/Admin");
+                return RedirectToAction("Index");
             }
             else
             {
                 cn.Close();
-                return RedirectToAction("Login0");
+                return RedirectToAction("Login");
             }
         }
 
@@ -52,39 +71,37 @@ namespace ProyectDW2.Controllers
         [HttpGet]
         public JsonResult List()
         {
-            List<User> tmp = new List<User>();
-            cmd = new SqlCommand("USP_LOGIN_LIST", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            User p = new User();
-            while (dr.Read())
-            {
-                p = new User()
-                {
-                    idUser = dr.GetInt32(0),
-                    PersonFirstName = dr.GetString(1),
-                    PersonSurName = dr.GetString(2),
-                    PersonLastName = dr.GetString(3),
-                    PersonBirthday = dr.GetDateTime(4),
-                    PersonNumber = dr.GetInt32(5),
-                    PersonEmail = dr.GetString(6),
-                    idPersonDoc = dr.GetInt32(7),
-                    NumberDoc = dr.GetString(8),
-                    idPersonSex = dr.GetInt32(9),
-                    idDistrict = dr.GetInt32(10),
-                    userName = dr.GetString(11),
-                    userPass = dr.GetString(12),
-                    idProfile = dr.GetInt32(13),
-                    dateRegister = dr.GetDateTime(14),
-                    flag_state = dr.GetInt32(15),
-                };
-                tmp.Add(p);
-            }
-
-            dr.Close();
-            cn.Close();
-            var json = JsonConvert.SerializeObject(tmp);
+            var json = JsonConvert.SerializeObject(bl.list());
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult Read(int id)
+        {
+            var json = JsonConvert.SerializeObject(bl.Read(id));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult Create(User u)
+        {
+            var json = JsonConvert.SerializeObject(bl.Create(u));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult Update(User u)
+        {
+            var json = JsonConvert.SerializeObject(bl.Update(u));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult Delete(int id)
+        {
+            var json = JsonConvert.SerializeObject(bl.Delete(id));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ListUserPerf(int id)
+        {
+            var json = JsonConvert.SerializeObject(bl.listPerf(id));
             return Json(json, JsonRequestBehavior.AllowGet);
         }
     }

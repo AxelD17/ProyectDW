@@ -1,0 +1,19 @@
+﻿.rq {
+    position: relative;
+}
+
+    .rq::after {
+        position: absolute;
+        top: 3px;
+        left: 95%;
+        content: "X";
+        color: white;
+        font-size: 1em;
+        text-align: center;
+        line-height: 25px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        background-color: red;
+    }

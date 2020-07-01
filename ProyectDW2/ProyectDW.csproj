@@ -123,17 +123,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DistrictController.cs" />
+    <Compile Include="Controllers\DoctorEspecialidadController.cs" />
+    <Compile Include="Controllers\EspecialidadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserDocController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\datatable.css" />
     <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\jquery-ui.min.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
     <Content Include="Content\css\style.css" />
@@ -141,8 +149,12 @@
     <Content Include="Content\img\clinica-dental.jpg" />
     <Content Include="Content\img\logo-mascota.png" />
     <Content Include="Content\img\logo-oficial-pazi-blanco.png" />
+    <Content Include="Content\img\logo-oficial-pazi-menu-b.png" />
     <Content Include="Content\img\pazi-logo-menu.png" />
     <Content Include="Content\img\undraw_posting_photo.svg" />
+    <Content Include="Content\js\District.js" />
+    <Content Include="Content\js\DoctorEspecialidad.js" />
+    <Content Include="Content\js\Especialidad.js" />
     <Content Include="Content\js\lib\datatable.min.js" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
@@ -150,9 +162,14 @@
     <Content Include="Content\js\demo\datatables-demo.js" />
     <Content Include="Content\js\generic.js" />
     <Content Include="Content\js\lib\jquery-3.4.1.min.js" />
+    <Content Include="Content\js\lib\jquery-ui.min.js" />
     <Content Include="Content\js\lib\sb-admin-2.js" />
     <Content Include="Content\js\lib\sb-admin-2.min.js" />
+    <Content Include="Content\js\Login.js" />
+    <Content Include="Content\js\Profile.js" />
+    <Content Include="Content\js\sexo.js" />
     <Content Include="Content\js\User.js" />
+    <Content Include="Content\js\UserDoc.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
@@ -1946,15 +1963,24 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Security\LogIn.cshtml" />
-    <Content Include="Views\User\_LayoutPage1.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Especialidad\Index.cshtml" />
+    <Content Include="Views\District\Index.cshtml" />
+    <Content Include="Views\UserDoc\Index.cshtml" />
+    <Content Include="Views\Genero\Index.cshtml" />
+    <Content Include="Views\DoctorEspecialidad\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
-      <Project>{e1086030-e804-4f24-a7a5-73685317dff3}</Project>
+      <Project>{dcd704ab-65c2-4073-b57e-4131cf6e99db}</Project>
       <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{73d1ed9f-961a-4823-bef0-f54bf9855e2c}</Project>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

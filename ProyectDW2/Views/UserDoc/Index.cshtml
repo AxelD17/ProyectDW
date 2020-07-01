@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/datatable.css" rel="stylesheet" />
+<link href="~/Content/css/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/css/admin.css" rel="stylesheet" />
+
+<br />
+<div class="container-fluid">
+    <h2>Tipo Documento Usuario</h2>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Filtros</h6>
+        </div>
+        <div class="card-body">
+
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Resultado</h6>
+        </div>
+        <div class="card-body">
+            <div id="divTabla" class="table-responsive"></div>
+            <br />
+            <button type="button" class="btn btn-info btn-lg" onclick="openModal(0)">Agregar</button>
+        </div>
+    </div>
+</div>
+
+<div id="ModalUserDoc" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="hdID" class="clean-input" />
+                <table style="width:80%;margin:auto">
+                    <tr>
+                        <td class="col-sm-4">Nombre</td>
+                        <td class="col-sm-8"><input type="text" id="txtNombre" class="clean-input required" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnAceptar" class="btn btn-success">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalMensaje" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleD"></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="hdIDD" class="clean-input" />
+                <span>Nota: Para habilitar nuevamente la opción, comunicarse con el área de TI</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancelarD" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnAceptarD" class="btn btn-success">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/js/lib/jquery-3.4.1.min.js"></script>
+<script src="~/Content/js/lib/jquery-ui.min.js"></script>
+<script src="~/Content/js/lib/datatable.min.js"></script>
+<script src="~/Content/js/generic.js"></script>
+<script src="~/Content/js/UserDoc.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+

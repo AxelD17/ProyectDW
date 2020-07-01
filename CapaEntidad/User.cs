@@ -22,6 +22,7 @@ namespace CapaEntidad
         public int idPersonSex { get; set; }
         public int idDistrict { get; set; }
         public int idProfile { get; set; }
+        public Profile profile { get; set; }
         public DateTime dateRegister { get; set; }
         public int flag_state { get; set; }
     }

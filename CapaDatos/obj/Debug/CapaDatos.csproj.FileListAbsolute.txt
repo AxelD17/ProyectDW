@@ -3,3 +3,12 @@ D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\bin\Debug\
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.dll
 D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaDatos\obj\Debug\CapaDatos.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\bin\Debug\CapaDatos.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\bin\Debug\CapaEntidad.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\bin\Debug\CapaEntidad.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\obj\Debug\CapaDatos.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaDatos\obj\Debug\CapaDatos.pdb

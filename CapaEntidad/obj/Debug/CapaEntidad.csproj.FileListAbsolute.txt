@@ -1,6 +1,5 @@
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\bin\Debug\CapaEntidad.dll
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\bin\Debug\CapaEntidad.pdb
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.dll
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.pdb
-D:\Proyectos CIbertec\DESARROLLO DE SERVICIOS WEB\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Proyectos\Proyectos Cibertec 5to Ciclo\ProyectDW\CapaEntidad\obj\Debug\CapaEntidad.pdb
