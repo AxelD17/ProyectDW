@@ -224,5 +224,29 @@ namespace CapaDatos
             cn.Close();
             return tmp;
         }
+        public List<User> listDocEspecialidad(int id)
+        {
+            List<User> tmp = new List<User>();
+            cmd = new SqlCommand("USP_ESPECIALIDAD_LIST_USER", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idEspecialidad", id);
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            User p = new User();
+            while (dr.Read())
+            {
+                p = new User()
+                {
+                    idUser = dr.GetInt32(0),
+                    PersonFirstName = dr.GetString(1),
+                    PersonSurName = dr.GetString(2)
+                };
+                tmp.Add(p);
+            }
+
+            dr.Close();
+            cn.Close();
+            return tmp;
+        }
     }
 }

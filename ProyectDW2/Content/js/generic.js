@@ -1,4 +1,6 @@
 ﻿
+var user = []
+
 function llenarcombo(data, control, primerElemento) {
     var contenido = "";
     if (primerElemento == true) {
@@ -81,4 +83,18 @@ function requiredData() {
         }
     }
     return exito
+}
+
+function formatMoney(cant) {
+    const formatterSoles = new Intl.NumberFormat('es-PE', {
+        style: 'currency',
+        currency: 'PEN',
+        minimumFractionDigits: 2
+    })
+    return formatterSoles.format(cant);
+}
+
+function convertDateFormat(string) {
+    var info = string.split('-').reverse().join('/');
+    return info;
 }

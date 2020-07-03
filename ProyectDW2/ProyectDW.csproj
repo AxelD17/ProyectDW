@@ -123,10 +123,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CitasController.cs" />
     <Compile Include="Controllers\DistrictController.cs" />
     <Compile Include="Controllers\DoctorEspecialidadController.cs" />
     <Compile Include="Controllers\EspecialidadController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
@@ -152,6 +152,7 @@
     <Content Include="Content\img\logo-oficial-pazi-menu-b.png" />
     <Content Include="Content\img\pazi-logo-menu.png" />
     <Content Include="Content\img\undraw_posting_photo.svg" />
+    <Content Include="Content\js\Citas.js" />
     <Content Include="Content\js\District.js" />
     <Content Include="Content\js\DoctorEspecialidad.js" />
     <Content Include="Content\js\Especialidad.js" />
@@ -166,6 +167,7 @@
     <Content Include="Content\js\lib\sb-admin-2.js" />
     <Content Include="Content\js\lib\sb-admin-2.min.js" />
     <Content Include="Content\js\Login.js" />
+    <Content Include="Content\js\MisCitas.js" />
     <Content Include="Content\js\Profile.js" />
     <Content Include="Content\js\sexo.js" />
     <Content Include="Content\js\User.js" />
@@ -1941,9 +1943,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1972,6 +1971,8 @@
     <Content Include="Views\UserDoc\Index.cshtml" />
     <Content Include="Views\Genero\Index.cshtml" />
     <Content Include="Views\DoctorEspecialidad\Index.cshtml" />
+    <Content Include="Views\Citas\Index.cshtml" />
+    <Content Include="Views\Citas\Citas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">

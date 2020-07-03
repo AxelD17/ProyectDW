@@ -82,9 +82,8 @@
             <div id="collapseCli" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Citas:</h6>
-                    @Html.ActionLink("Mis Citas", "Index", "Citas", new { area = "" }, new { @class = "collapse-item" })
                     @Html.ActionLink("Solicitar Cita", "Index", "Citas", new { area = "" }, new { @class = "collapse-item" })
-                    @Html.ActionLink("Cotizar", "Index", "Citas", new { area = "" }, new { @class = "collapse-item" })
+                    @Html.ActionLink("Mis Citas", "Citas", "Citas", new { area = "" }, new { @class = "collapse-item" })
                 </div>
             </div>
         </li>

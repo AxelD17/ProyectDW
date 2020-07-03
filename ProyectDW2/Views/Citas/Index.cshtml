@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/datatable.css" rel="stylesheet" />
+<link href="~/Content/css/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/css/admin.css" rel="stylesheet" />
+
+<br />
+<div class="container-fluid" id="SolicitarCita">
+    <h2>Solicitar Cita</h2>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Ingresar Datos</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <label class="col-sm-1 col-form-label-lg text-right">Cliente</label>
+                <div class="col-sm-4"><select id="cboCliente" class="clean-select required form-control"></select></div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label-lg text-right">Servicio</label>
+                <div class="col-sm-4"><select id="cboEspecialidad" class="clean-select required form-control"></select></div>
+                <label class="col-sm-1 col-form-label-lg text-right">Doctor</label>
+                <div class="col-sm-4"><select id="cboDoctor" class="clean-select required form-control"></select></div>
+            </div>
+            <div class="row">
+                <label class="col-sm-1 col-form-label-lg text-right">Fecha</label>
+                <div class="col-sm-2"><input type="text" id="txtFechaCita" class="datepicker clean-input required form-control" /></div>
+                <label class="col-sm-1 col-form-label-lg text-right">Hora</label>
+                <div class="col-sm-1"><input type="time" id="txtHoraCita" class="clean-input required form-control" /></div>
+                <label class="col-sm-1 col-form-label-lg text-right">Precio :</label>
+                <label class="col-sm-4 col-form-label-lg text-left" id="txtPrecio"></label>
+            </div>
+            <input type="hidden" id="txtPrecioHI" />
+            <input type="hidden" id="txtIdDocHI" />
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="btnLimpiar" class="btn btn-warning" data-dismiss="modal">Limpiar</button>
+            <button type="button" id="btnAgregar" class="btn btn-success">Agregar</button>
+            <button type="button" id="btnCarrito" class="btn btn-info">Ir a Carrito</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="CarritoCita" style="display:none;">
+    <h2>Solicitar Cita</h2>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Carrito</h6>
+        </div>
+        <div class="card-body">
+            <div id="divTabla"></div>
+        </div>
+        <div class="card-footer">
+            <button type="button" id="btnRetroceder" class="btn btn-info" data-dismiss="modal">Seguir Comprando</button>
+            <button type="button" id="btnCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar Compra</button>
+            <button type="button" id="btnComprar" class="btn btn-success">Comprar</button>
+        </div>
+    </div>
+</div>
+
+<div id="ModalMensaje" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleD"></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancelarD" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnAceptarD" class="btn btn-success">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/js/lib/jquery-3.4.1.min.js"></script>
+<script src="~/Content/js/lib/jquery-ui.min.js"></script>
+<script src="~/Content/js/lib/datatable.min.js"></script>
+<script src="~/Content/js/generic.js"></script>
+<script src="~/Content/js/Citas.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+

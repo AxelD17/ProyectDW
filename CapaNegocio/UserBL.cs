@@ -40,5 +40,9 @@ namespace CapaNegocio
         {
             return userDB.listPerf(id);
         }
+        public List<User> listDocEspecialidad(int id)
+        {
+            return userDB.listDocEspecialidad(id);
+        }
     }
 }

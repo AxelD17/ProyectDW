@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CitasDB.cs" />
     <Compile Include="DistrictDB.cs" />
     <Compile Include="DoctorEspecialidadDB.cs" />
     <Compile Include="EspecialidadDB.cs" />

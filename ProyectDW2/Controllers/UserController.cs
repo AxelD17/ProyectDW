@@ -24,22 +24,6 @@ namespace ProyectDW2.Controllers
         {
             return View();
         }
-        //[HttpGet]
-        //public ActionResult Verify(string userName, string userPass)
-        //{
-        //    var rpt = bl.verify(userName, userPass);
-        //    if (rpt == 1)
-        //    {
-        //        cn.Close();
-        //        //return RedirectToAction("../Main/Admin");
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        cn.Close();
-        //        return RedirectToAction("Login");
-        //    }
-        //}
 
         [HttpPost]
         public ActionResult Verify(User u)
@@ -52,8 +36,16 @@ namespace ProyectDW2.Controllers
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
+                User n = new User();
+                n.idUser = dr.GetInt32(0);
+                n.PersonFirstName = dr.GetString(1);
+                n.PersonSurName = dr.GetString(2);
+
+
+                Session["idUser"] = n.idUser;
+                Session["PersonFirstName"] = n.PersonFirstName;
+                Session["PersonSurName"] = n.PersonSurName;
                 cn.Close();
-                //return RedirectToAction("../Main/Admin");
                 return RedirectToAction("Index");
             }
             else
@@ -102,6 +94,12 @@ namespace ProyectDW2.Controllers
         public JsonResult ListUserPerf(int id)
         {
             var json = JsonConvert.SerializeObject(bl.listPerf(id));
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult listDocEspecialidad(int id)
+        {
+            var json = JsonConvert.SerializeObject(bl.listDocEspecialidad(id));
             return Json(json, JsonRequestBehavior.AllowGet);
         }
     }
